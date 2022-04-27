@@ -9,6 +9,7 @@ class App extends React.Component {
       text: "Sahil's dope",
       text2: "Where da hoes",
       h1OG: "font-white",
+      h2OG: "font-black", 
     }
   }
  render() {
@@ -24,12 +25,14 @@ class App extends React.Component {
       }}>Click to be nicer</button>
       </div>
       <div>
-        <h2> {this.state.text}</h2>
+        <h2 className={this.state.h2OG}> {this.state.text}</h2>
         <button onClick={
           () => {
             this.setState(
               {
+                h2OG: "font-black-moved",
                 text: "Boobs"
+                
               }
             )
             console.log("balls")
