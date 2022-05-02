@@ -22,37 +22,42 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  
+
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.font-white {
-  color: white
-}
-
-.font-white-moved {
+.container {
+  display: flex;
+  padding-top: 500px;
+  justify-content: space-evenly;
   color: white;
-  margin-left: 500px;
+}
+
+
+
+.message-moved {
+  padding-top: 500px;
+  width: 500px;
+  transition: 10s ease-in;
+  transform: rotate(360deg);
+}
+
+
+
+.text-moved {
+  padding-left: 300px;
   transition: 5s ease-in;
-}
-
-.font-black {
-  color: black
-}
-
-.font-black-moved {
-  color: black;
-  margin-left: 300px;
-  transition: 1s ease-in;
+  transform: rotate(360000000deg);
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
