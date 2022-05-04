@@ -8,28 +8,43 @@ class App extends React.Component {
       message: "Cubas sucks",
       text: "Sahil's dope",
       text2: "oh yeahhh",
-      h1OG: "font-white",
-      h2OG: "font-black",
+      h1OG: undefined,
+      h2OG: undefined,
+
+
     }
   }
+
+
   render() {
     console.log("balls")
     console.log("(っ＾▿＾)💨")
+
+    const switchToBlue = () => {
+      this.setState({
+        h1OG: "message-moved",
+        message: "We love Cuba",
+      })
+      if (this.state.h1OG === "message-moved") {
+        this.setState({
+          h1OG: "message-moved message-moved2"
+        })
+      }
+    }
+
+
     return (
+
 
       <div className="container">
 
         <div>
-          <h1 className={this.state.h1OG}>{this.state.message}</h1>
+          <h1 className={this.state.h1OG}>{this.state.message} </h1>
           <button onClick={() => {
-            this.setState({
-              h1OG: "message-moved",
-              message: "We love Cuba",
-
-            }
-            )
+            this.switchToBlue()
           }}>Click to be nicer</button>
         </div>
+
         <div>
           <h2 className={this.state.h2OG}> {this.state.text}</h2>
           <button onClick={

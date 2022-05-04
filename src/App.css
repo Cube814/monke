@@ -41,8 +41,17 @@
 .message-moved {
   padding-top: 500px;
   width: 500px;
-  transition: 10s ease-in;
+  transition: 5s ease-in;
   transform: rotate(360deg);
+  color: red;
+
+
+
+}
+
+
+.message-moved2 {
+  color: blue
 }
 
 
@@ -51,7 +60,13 @@
   padding-left: 300px;
   transition: 5s ease-in;
   transform: rotate(360000000deg);
+  color: red;
+
+
+
 }
+
+
 
 @keyframes App-logo-spin {
   from {
