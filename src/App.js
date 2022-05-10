@@ -1,6 +1,5 @@
 import React from 'react'
 import './App.css'
-
 class App extends React.Component {
   constructor() {
     super()
@@ -10,53 +9,59 @@ class App extends React.Component {
       text2: "oh yeahhh",
       h1OG: undefined,
       h2OG: undefined,
-
-
     }
   }
-
-
   render() {
     console.log("balls")
     console.log("(っ＾▿＾)💨")
-
     const switchToBlue = () => {
       this.setState({
         h1OG: "message-moved",
         message: "We love Cuba",
       })
-      if (this.state.h1OG === "message-moved") {
-        this.setState({
-          h1OG: "message-moved message-moved2"
-        })
-      }
+      setTimeout(() => {
+        if (this.state.h1OG === "message-moved") {
+          this.setState({
+            h1OG: "message-moved message-moved2",
+
+          })
+        }
+        console.log(this.state.h1OG)
+      }, 3000)
     }
-
-
+    const switchToBlue2 = () => {
+      this.setState({
+        h2OG: "text-moved",
+        message: "Sahil's dope",
+      })
+      setTimeout(() => {
+        if (this.state.h2OG === "text-moved") {
+          this.setState({
+            h2OG: "text-moved text-moved2"
+          })
+        }
+        console.log(this.state.h1OG)
+      }, 3000)
+    }
     return (
-
-
       <div className="container">
-
         <div>
           <h1 className={this.state.h1OG}>{this.state.message} </h1>
           <button onClick={() => {
-            this.switchToBlue()
+            switchToBlue()
           }}>Click to be nicer</button>
         </div>
-
         <div>
           <h2 className={this.state.h2OG}> {this.state.text}</h2>
           <button onClick={
             () => {
+              switchToBlue2()
               this.setState(
                 {
                   h2OG: "text-moved",
                   text: "Cool bros"
-
                 }
               )
-
             }
           }>Sike</button>
         </div>
@@ -74,11 +79,7 @@ class App extends React.Component {
           }>touch this</button>
         </div>
       </div>
-
     )
-
   }
-
 }
-
 export default App
