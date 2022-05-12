@@ -34,6 +34,17 @@
   padding-top: 500px;
   justify-content: space-evenly;
   color: white;
+  z-index: -1;
+}
+
+.sikebutton {
+  background: #25a921;
+  border: 3px #8338ec solid;
+  border-radius: 5px;
+  width: 48px;
+  height: 28px;
+  color: red;
+  transition: 5s ease-in
 }
 
 
@@ -41,7 +52,7 @@
 .message-moved {
   padding-top: 500px;
   width: 500px;
-  transition: 2s ease-out;
+  transition: 2s ease-in;
   transform: rotate(360deg);
   color: red;
 
@@ -49,28 +60,24 @@
 
 
 .message-moved2 {
-  transition: 2s ease-out;
+  transition: 3s ease-in;
   color: blue
 }
 
 
 
+
 .text-moved {
   padding-left: 300px;
+  z-index: 1;
   transition: 5s ease-in;
   transform: rotate(360000000deg);
   color: red;
-
-
-
 }
 
 .text-moved2 {
-  transition: 6s ease-in;
-  color: blue;
-
-
-
+  transition: 2s ease-out;
+  color: transparent;
 }
 
 

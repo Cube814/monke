@@ -32,7 +32,7 @@ class App extends React.Component {
     const switchToBlue2 = () => {
       this.setState({
         h2OG: "text-moved",
-        message: "Sahil's dope",
+        text: "Sahil's dope",
       })
       setTimeout(() => {
         if (this.state.h2OG === "text-moved") {
@@ -53,7 +53,7 @@ class App extends React.Component {
         </div>
         <div>
           <h2 className={this.state.h2OG}> {this.state.text}</h2>
-          <button onClick={
+          <button className='sikebutton' onClick={
             () => {
               switchToBlue2()
               this.setState(
